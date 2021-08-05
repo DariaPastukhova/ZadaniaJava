@@ -15,5 +15,5 @@ public class PierwszeZadanie {
             System.out.println("Osoba jest stara");
         }
 
-        }
     }
+}
