@@ -1,18 +1,19 @@
 public class PierwszeZadanie {
     public static void main(String[] args) {
-        int age = 50;
+        int age = 80;
 
-        if (age > 49) {
+        if (age <= 18) return;
+        if (age > 95) return;
+
+        if (age < 18) {
+            System.out.println("Osoba jest dzieckiem");
+        } else if (age <= 35) {
+            System.out.println("Osoba jest młoda");
+        } else if (age <= 59) {
+            System.out.println("Osoba jest średniego wieku");
+        } else {
             System.out.println("Osoba jest stara");
-            if (age == 50) {
-                System.out.println("Osoba jest średniego wieku");
-                if (age < 49) {
-                    System.out.println("Osoba jest młoda lub dzieckiem");
+        }
 
-                } else {
-                    System.out.println("Osoba jest młoda lub dzieckiem");
-                }
-            }
         }
     }
-}
