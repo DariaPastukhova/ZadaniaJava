@@ -1,14 +1,25 @@
+import java.util.Arrays;
+
 public class Lekcja4Zadanie2 {
+    static void swap(int[] tab, int a, int b) {
+        int temp = tab[a];
+        tab[a] = tab[b];
+        tab[b] = temp;
+    }
+
+    static void show(int[] tab) {
+        for (int i = 0; i < tab.length; i++) {
+            System.out.print(tab[i] + " ");
+        }
+    }
+
     public static void main(String[] args) {
         int[] tab = {1, 2, 3, 4, 5, 6};
-        // wynik: { 6, 5, 4, 3, 2, 1 }
-
-        for (int i = 0; i < tab.length; i++){
+        System.out.println("Tablica przed obróceniem: " + Arrays.toString(tab));
+        int itemCount = tab.length / 2;
+        for (int i = 0; i < itemCount; i++) {
+            swap(tab, i, tab.length - i - 1);
         }
-            for (int i = tab.length - 1; i >= 0; i--) {
-                System.out.print(tab[i] + " ");
-        }
-            System.out.println();
+        System.out.println("Tablica po obróceniu: " + Arrays.toString(tab));
     }
 }
-
